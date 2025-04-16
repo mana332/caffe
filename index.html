@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>cafe</title>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Source Sans Pro', sans-serif;
+			font-size: 18px;
+			line-height: 2em;
+			overflow-x: hidden;
+			background-image: url("images/scatter-coffee-background.svg");
+			background-size: cover;
+background-attachment: fixed;
+background-position: center;
+		}
+
+		.button {
+			background-color: white;
+			border: none;
+			color: darkred;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+
+		a {
+			text-decoration: none;
+			color: #3D3A4B;
+		}
+
+		a:hover {
+			color: #D3C0CD;
+		}
+
+		h1, h2, h3, h4, h5, h6, p, i, address, .text-white {
+			color: white;
+		}
+
+		.footer {
+			color: #999999;
+			text-align: center;
+		}
+
+		.container {
+			width: 100%;
+			max-width: 970px;
+			box-sizing: border-box;
+			margin: 0 auto;
+			padding: 60px 15px;
+		}
+
+		.flex-center {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.section {
+			display: flex;
+		}
+
+		.section > div {
+			flex: 1 1;
+		}
+
+		.buttons-group {
+			text-align: right;
+			padding: 0;
+			margin: 0;
+		}
+
+		.buttons-group li {
+			display: inline-block;
+			list-style: none;
+			margin-left: 40px;
+		}
+
+		.buttons-group li a.active {
+			color: #3D3A4B;
+		}
+
+		.p-50 {
+			padding: 50px;
+		}
+
+		.margin-buttom-40 {
+			margin-bottom: 40px;
+		}
+
+		.margin-buttom-80 {
+			margin-bottom: 80px;
+		}
+
+		.bgcolor-2 {
+			background-color: #B19994;
+		}
+
+		.bgcolor-3 {
+			background-color: #937666;
+		}
+
+		.border-rounded {
+			border-radius: 15px;
+		}
+
+		.buttons-group li a.active {
+			color: #D3C0CD;
+			font-weight: bold;
+		}
+
+		
+		html {
+			scroll-behavior: smooth;
+		}
+		.kklk{
+			width: 13%;
+			position: absolute;
+top: 0;
+left: 0;
+		}
+
+.cup-handle {
+    position: absolute;
+    right: -15px;
+    top: 20px;
+    width: 20px;
+    height: 30px;
+    border: 5px solid #937666;
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+}
+
+.coffee-content {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    height: 30px;
+    background-color: #5D4037;
+    border-radius: 0 0 5px 5px;
+}
+
+.coffee-steam {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    width: 6px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    animation: steam 2s infinite;
+}
+
+.coffee-steam:nth-child(2) {
+    left: 30px;
+    height: 10px;
+    animation-delay: 0.5s;
+}
+
+
+.particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #B19994;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+#coffeeContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+	</style>
+</head>
+
+<body>
+	
+	<div class="container">
+		<ul class="buttons-group margin-buttom-40" id="navbar">
+			<li><a href="#About_us">Home</a></li>
+			<li><a href="#Menue">Menue</a></li>
+			<li><a href="#Reservation">Reservation</a></li>
+			<li><a href="contact.php">contact</a></li>
+		</ul>
+  <header>
+	<img src="images/transparent-logo.svg" class="kklk" alt="dddd"/>
+  </header>
+		<section class="section margin-buttom-80 p-50 bgcolor-2 border-rounded" id="About_us">
+			<div class="section-header flex-center">
+				<img src="images/img-1.jpg" width="75%" />
+			</div>
+			<div>
+				<h2>ABOUT US</h2>
+				<p class="margin-buttom-40">At Brew Masters Coffee, we are passionate about bringing you the finest coffee experience. Our journey begins with sourcing the highest quality beans from the best coffee-growing regions around the world. We combine traditional methods of roasting with modern techniques to create a coffee that is bold, flavorful, and unforgettable.
+					</p>
+				<p class="mb-0">Whether you prefer a strong espresso to kick-start your day or a smooth latte to relax in the evening, our wide range of blends and brews are designed to suit every taste. We believe that coffee is more than just a drink – it’s a ritual, a moment to savor, and a chance to connect with others.
+				</p>
+			</div>
+		</section>
+
+		<section class="section margin-buttom-80 p-50 bgcolor-3 border-rounded" id="Menue">
+			<div class="section-header flex-center">
+				<img src="images/img-1.jpg" width="75%" />
+			</div>
+			<div>
+				<h2>MENU</h2>
+				<p class="margin-buttom-40">Welcome to Brew Masters Coffee, where we bring you the finest coffee experiences in every cup. Our drinks are carefully selected to suit every taste, whether you're a fan of bold espresso or sweet beverages that combine a variety of delightful flavors. Along with a selection of delicious pastries, we offer you a coffee experience like no other.
+                <br>
+				Explore our diverse menu:
+			    <br>	
+				• Hot Coffees  <br>
+				• Hot Coffees <br>
+				• Teas & Refreshing Beverages  <br>
+				• Pastries & Desserts<br><br>
+					
+					Everything we serve is crafted with the finest ingredients to ensure moments filled with joy and exceptional flavor. Enjoy the Brew Masters Coffee experience with every drink and bite.</p>
+				<a href="menue.php"><button class="button">Order NOW</button></a>
+			</div>
+		</section>
+
+
+		<section class="section margin-buttom-80 p-50 bgcolor-2 border-rounded" id="Reservation">
+			<div class="section-header flex-center">
+				<img src="images/img-3.jpg" width="75%" />
+			</div>
+			<div>
+				<h2>RESERVATION</h2>
+				<p class="margin-buttom-40">
+					At Brew Masters Coffee, we understand that sometimes the best moments are shared with others. That’s why we offer a convenient reservation system to ensure you always have a seat when you visit. Whether you're planning a casual coffee break, a special gathering, or a business meeting, our cozy ambiance is perfect for any occasion.
+					<br>
+					Why Reserve with Us?
+					<br>
+					• Guaranteed seating for your group
+					<br>
+					• Convenient booking options available online or by phone
+					<br>
+					• Comfortable, welcoming atmosphere for all types of gatherings
+					<br>
+					• Personalized service to meet your needs
+					<br>
+					Simply choose your preferred time, select the number of guests, and leave the rest to us. We’ll ensure your spot is ready when you arrive, so you can enjoy your coffee experience without any hassle.
+					
+					Reserve Now – It’s quick, easy, and the best way to enjoy your time at Brew Masters Coffee!
+					
+					</p>
+				<a href="reservation.php"><button class="button">Book NOW</button></a>
+			</div>
+		</section>
+
+
+		<footer class="footer">
+			Brew Masters Coffee 
+			𝐖𝐄𝐋𝐂𝐎𝐌𝐄(˶ᵔ ᵕ ᵔ˶)
+		</footer>
+	</div>
+
+	<script>
+		const links = document.querySelectorAll('#navbar li a');
+		links.forEach(link => {
+			link.addEventListener('click', function () {
+				links.forEach(l => l.classList.remove('active'));
+				this.classList.add('active');
+			});
+		});
+	</script>
+</body>
+
+</html>

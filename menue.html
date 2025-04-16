@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>cafe</title>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Source Sans Pro', sans-serif;
+			font-size: 18px;
+			line-height: 2em;
+			overflow-x: hidden;
+			background-image: url("images/scatter-coffee-background.svg");
+			background-size: cover;
+background-attachment: fixed;
+background-position: center;
+		}
+
+		.button {
+			background-color: white;
+			border: none;
+			color: #3D3A4B;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+
+		a {
+			text-decoration: none;
+			color: #3D3A4B;
+		}
+
+		a:hover {
+			color: #D3C0CD;
+		}
+
+		h1, h2, h3, h4, h5, h6, p, i, address, .text-white {
+			color: white;
+		}
+
+		.footer {
+			color: #999999;
+			text-align: center;
+			margin-top: 40px;
+		}
+
+		.container {
+			width: 100%;
+			max-width: 970px;
+			box-sizing: border-box;
+			margin: 0 auto;
+			padding: 60px 15px;
+		}
+
+		.flex-center {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.section {
+			display: flex;
+		}
+
+		.section > div {
+			flex: 1 1;
+		}
+
+		.buttons-group {
+			text-align: right;
+			padding: 0;
+			margin: 0;
+		}
+
+		.buttons-group li {
+			display: inline-block;
+			list-style: none;
+			margin-left: 40px;
+		}
+
+		.buttons-group li a.active {
+			color: #D3C0CD;
+			font-weight: bold;
+			border-bottom: 2px solid #D3C0CD;
+			padding-bottom: 5px;
+		}
+
+		.padding-30 {
+			padding: 30px;
+		}
+
+		.p-50 {
+			padding: 50px;
+		}
+
+		.margin-buttom-40 {
+			margin-bottom: 40px;
+		}
+
+		.margin-buttom-80 {
+			margin-bottom: 80px;
+		}
+
+		.bgcolor-2 {
+			background-color: #B19994;
+		}
+
+		.bgcolor-3 {
+			background-color: #937666;
+		}
+
+		.border-rounded {
+			border-radius: 15px;
+		}
+
+		#summary-table {
+			font-family: Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		#summary-table td,
+		#summary-table tr {
+			border: 1px solid white;
+			color: white;
+			padding: 5px;
+		}
+
+		#summary-table th {
+			padding: 2px;
+			border: 1px solid white;
+			text-align: center;
+			background-color: white;
+			color: #937666;
+			border: 1px solid #937666;
+		}
+
+		#summary-table tr:hover {
+			background-color: #ddd;
+		}
+		html {
+			scroll-behavior: smooth;
+		}
+		.kklk{
+			width: 13%;
+			position: absolute;
+top: 0;
+left: 0;
+
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<ul class="buttons-group margin-buttom-40">
+			<li><a href="index.php">Home</a></li>
+			<li><a href="menue.php">Menue</a></li>
+			<li><a href="reservation.php">Reservation</a></li>
+		</ul>
+		<header>
+			<img src="images/transparent-logo.svg" class="kklk" alt="dddd"/>
+		  </header>
+		<section class="section margin-buttom-80 padding-30 bgcolor-2 border-rounded">
+			<div class="section-header flex-center">
+				<img src="images/img-5.jpg" width="75%" />
+			</div>
+			<div>
+				<h2>Saudi coffee</h2>
+				<p class="margin-buttom-40">Enjoy authentic Saudi coffee that combines rich flavor and ancient traditions. Made from the finest, carefully roasted coffee beans, blended with premium spices such as cardamom, it's carefully prepared to deliver a distinctive taste every time🌴💚.</p>
+				<button class="button" onclick="add('Saudi coffee')">add</button>
+			</div>
+		</section>
+
+		<section class="section margin-buttom-80 padding-30 bgcolor-2 border-rounded">
+			<div class="section-header flex-center">
+				<img src="images/img-4.jpg" width="75%" />
+			</div>
+			<div>
+				<h2>Turkish coffee</h2>
+				<p class="margin-buttom-40">Discover the authentic flavor of Turkish coffee, made from the finest finely ground coffee beans and prepared in the traditional way in a pot over low heat. Rich, aromatic coffee adds a touch of luxury to your moments🌿☕.</p>
+				<button class="button" onclick="add('item 2')">add</button>
+			</div>
+		</section>
+
+		<section class="section margin-buttom-80 padding-30 bgcolor-2 border-rounded">
+			<div class="section-header flex-center">
+				<img src="images/img-6.jpg" width="75%" />
+			</div>
+			<div>
+				<h2>Choco cookies</h2>
+				<p class="margin-buttom-40">Indulge in luxurious cakes filled with cream and chocolate.
+					Indulge in an irresistible taste with biscuit cakes filled with white cream and decorated with lines of melted chocolate. Prepared using the finest ingredients, they offer the perfect combination of rich taste and crunchy texture. Every bite is a journey of pleasure and delight🧁✧˚.</p>
+				<button class="button" onclick="add('item 3')">add</button>
+			</div>
+		</section>
+
+		<section class="section margin-buttom-80 p-50 bgcolor-3 border-rounded" id="Menue">
+			<div>
+				<h2>Summary</h2>
+				<div style="display: inline-flex;">
+					<button class="button" onclick="list()">List</button>
+					<button class="button" id="print-button" onclick="printItems()" style="display: none;">Print</button>
+				</div>
+				<table id="summary-table" style="display: none;">
+					<tr>
+						<th>Items</th>
+					</tr>
+				</table>
+			</div>
+		</section>
+
+		<footer class="footer">
+			Brew Masters Coffee 
+			𝐖𝐄𝐋𝐂𝐎𝐌𝐄(˶ᵔ ᵕ ᵔ˶)
+		</footer>
+	</div>
+
+	<script>
+		const cart = [];
+
+		function add(item) {
+			cart.push(item);
+			alert(item + ' added!');
+			document.getElementById('print-button').style.display = 'inline-block';
+		}
+
+		function list() {
+			const table = document.getElementById('summary-table');
+			table.style.display = 'table';
+
+			// Clear existing rows
+			table.innerHTML = '<tr><th>Items</th></tr>';
+
+			// Add items
+			cart.forEach(i => {
+				const row = table.insertRow();
+				const cell = row.insertCell();
+				cell.textContent = i;
+			});
+		}
+
+		function printItems() {
+			const items = cart.join(', ');
+			window.print();
+		}
+
+		document.addEventListener('DOMContentLoaded', () => {
+			const links = document.querySelectorAll('.buttons-group a');
+			links.forEach(link => {
+				if (window.location.href.includes(link.getAttribute('href'))) {
+					link.classList.add('active');
+				}
+			});
+		});
+	</script>
+
+<!-- <script>
+	const cart = [];
+
+	function add(item) {
+		cart.push(item);
+		alert(item + ' added!');
+		document.getElementById('print-button').style.display = 'inline-block';
+
+		// Send to PHP
+		fetch('save_item.php', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded'
+			},
+			body: 'item=' + encodeURIComponent(item)
+		})
+		.then(response => response.text())
+		.then(data => {
+			console.log('Server says:', data);
+		})
+		.catch(error => console.error('Error:', error));
+	}
+
+	document.addEventListener('DOMContentLoaded', () => {
+			const links = document.querySelectorAll('.buttons-group a');
+			links.forEach(link => {
+				if (window.location.href.includes(link.getAttribute('href'))) {
+					link.classList.add('active');
+				}
+			});
+		});
+</script> -->
+
+</body>
+
+</html>

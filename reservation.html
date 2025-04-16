@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cafe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+  <style>
+   
+   body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Source Sans Pro', sans-serif;
+			font-size: 18px;
+			line-height: 2em;
+			overflow-x: hidden;
+			background-image: url("images/scatter-coffee-background.svg");
+			background-size: cover;
+background-attachment: fixed;
+background-position: center;
+		}
+
+    .button {
+      background-color: white;
+      border: none;
+      color: #3D3A4B;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    a {
+      text-decoration: none;
+      color: #3D3A4B;
+    }
+
+    a:hover {
+      color: #D3C0CD;
+    }
+
+    .section-text a {
+      color: #3D3A4B;
+    }
+
+    h1, h2, h3, h4, h5, h6, p, i, address, .text-white {
+      color: white;
+    }
+
+    .link-gray {
+      color: #999999;
+    }
+
+    .link-white {
+      color: white;
+    }
+
+    .footer {
+      color:#937666;
+      text-align: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 970px;
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 60px 15px;
+    }
+
+    .buttons-group {
+      text-align: right;
+      padding: 0;
+      margin: 0;
+    }
+
+    .buttons-group li {
+      display: inline-block;
+      list-style: none;
+      margin-left: 40px;
+    }
+
+    .buttons-group li a.active {
+      color: #3D3A4B;
+    }
+
+    .section,
+    .contact {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .p-50 {
+      padding: 50px;
+    }
+
+    .padding-30 {
+      padding: 30px;
+    }
+
+    .margin-buttom-40 {
+      margin-bottom: 40px;
+    }
+
+    .margin-buttom-80 {
+      margin-bottom: 80px;
+    }
+
+    .bgcolor-1 {
+      background-color: #D3C0CD;
+    }
+
+    .bgcolor-2 {
+      background-color: #B19994;
+    }
+
+    .bgcolor-3 {
+      background-color: #937666;
+    }
+
+    .border-rounded {
+      border-radius: 15px;
+    }
+
+    input[type=text],
+    select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    #summary-table {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #summary-table td,
+    #summary-table tr {
+      border: 1px solid white;
+      color: white;
+      padding: 5px;
+    }
+
+    #summary-table th {
+      padding: 2px;
+      border: 1px solid white;
+      text-align: center;
+      background-color: white;
+      color: #937666;
+      border: 1px solid #937666;
+    }
+
+    #summary-table tr:hover {
+      background-color: #ddd;
+    }
+
+    .buttons-group li a.active {
+			color: #D3C0CD;
+			font-weight: bold;
+    }
+    html {
+			scroll-behavior: smooth;
+		}
+    .kklk{
+			width: 10%;
+			position: absolute;
+top: 0;
+left: 0;
+
+		}
+   
+  </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="buttons-group margin-buttom-40">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="menue.php">Menue</a></li>
+            <li><a href="reservation.php">Reservation</a></li>
+
+        </ul>
+
+        <section class="section margin-buttom-80 padding-30 bgcolor-2 border-rounded" >
+            <div>
+                <h2>Enter Informations</h2>
+
+                <form action="save_reservation.php" method="post" onsubmit="availableTables()">
+                    <input type="text" name="person_name" id="person_name" placeholder="Enter your name">
+
+                    <select name="number_of_people" id="number_of_people">
+                        <option value=0>Select Number of People</option>
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                        <option value=3>4</option>
+                        <option value=5>5</option>
+                        <option value=6>6</option>
+                    </select>
+                    <select name="day" id="day">
+                        <option value=''>Select day</option>
+                        <option value='Sunday'>Sunday</option>
+                        <option value='Monday'>Monday</option>
+                        <option value='Tuesday'>Tuesday</option>
+                        <option value='Wednesday'>Wednesday</option>
+                    </select>
+                    <input type="submit" value="Submit" class="button">
+                </form>
+            </div>
+        </section>
+
+
+        <section class="section margin-buttom-80 p-50 bgcolor-3 border-rounded" id="details" style="display: none;">
+            <div>
+                <h2>Reservation Details</h2>
+                <hr>
+
+                <h4 id="show_person_name"></h4>
+                <h4 id="show_number_of_people"></h4>
+                <h4 id="show_day"></h4>
+            </div>
+        </section>
+
+
+        <footer class="footer">
+        𝐖𝐄𝐋𝐂𝐎𝐌𝐄(˶ᵔ ᵕ ᵔ˶)
+        </footer>
+
+    </div>
+
+    <script>
+        function availableTables() {
+
+            let person_name = document.getElementById("person_name").value
+            let number_of_people = document.getElementById("number_of_people").value
+            let day = document.getElementById("day").value
+
+            console.log(day)
+            console.log(number_of_people)
+
+            if (number_of_people == 0) {
+                alert("You Should Select Number of People");
+            }
+
+            else if (day == '') {
+                alert("You Should Select Day");
+            }
+
+            else if (day == 'Tuesday' && number_of_people > 3) {
+                alert("Only Availbe for 3 persons in Tuesday");
+            }
+
+            else {
+                const details = document.getElementById("details");
+                details.style.display = "block";
+
+                document.getElementById("show_person_name").innerHTML ="Person Name:   "+ person_name;
+                document.getElementById("show_number_of_people").innerHTML = "Number of People:  " +number_of_people;
+                document.getElementById("show_day").innerHTML = "Day:   "+  day;
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
