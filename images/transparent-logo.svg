@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <!-- Removed background rectangle for transparency -->
+  
+  <!-- Simple, recognizable coffee cup -->
+  <path d="M100,40 L180,40 L170,140 L110,140 Z" fill="#5D4037" />
+  <path d="M180,60 C200,60 200,90 180,90" fill="none" stroke="#5D4037" stroke-width="10" stroke-linecap="round" />
+  
+  <!-- Brand name in clear typography -->
+  <text x="220" y="85" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#000000">BREW</text>
+  <text x="220" y="115" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#000000">MASTERS</text>
+  <text x="220" y="145" font-family="Arial, sans-serif" font-size="18" fill="#5D4037">COFFEE</text>
+</svg>
